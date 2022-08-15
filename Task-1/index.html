@@ -4,9 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test for Frontend Web Developer Intern</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    
+    <form
+        method=""
+        action=""
+        name="valform"
+      >
+        <table>
+          <tr>
+            <td>
+              <label>Select your source:</label>
+            </td>
+            <td>
+              <p>Google Cloud Storage</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Provide a name for pipeline:</label>
+            </td>
+            <td>
+              <input type="text" name="pipeline" placeholder="e.g., cust_shop_energy_gkateway001" class="valid" minlength="5"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>GCS project name:</label>
+            </td>
+            <td>
+              <input type="text" name="bucket" placeholder="project-id" class="valid" minlength="5"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>GCS bucket name :</label>
+            </td>
+            <td>
+              <input type="text" name="file" placeholder="gs://your-bucket" class="valid" minlength="5"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Input Cloud Storage File(s) :</label>
+            </td>
+            <td>
+              <input type="text" name="credentials" placeholder="GCS location of your files" class="valid" minlength="5"/>
+              <p id="text">Example: gs://your-bucket/your-files/01.csv
+              </p>
+            </td>
+        </tr>
+          </tr>
+          <tr>
+            <td>
+              <label>GCS credentials :</label>
+            </td>
+            <td>
+              <input style="background-color:darkgrey;" type="text" name="" disabled />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Run Every :</label>
+            </td>
+            <td>
+              <input type="text" name="run" placeholder="(in minutes)" class="valid" minlength="5"/>
+            </td>
+          </tr>
+        </table>
+        <div class="buttons">
+          <input type="button" name="Create" value="Create" class="bttns bttn1" onclick="Validate()" />
+          <input type="button" name="Cancel" value="Cancel" class="bttns bttn2" onclick="Clear()"/>
+      </div> 
+      </form>
 </body>
+<script src="script.js"></script>
 </html>
