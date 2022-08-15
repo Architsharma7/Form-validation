@@ -1,0 +1,94 @@
+html, body{
+    margin: 0;
+    height:100%;
+    width:100%;
+}
+
+body , body {
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+form{
+    border: 1.5px solid black;
+    margin:auto;
+}
+
+label{
+    border-right: 1px solid black;
+}
+td:last-child {
+    border-right: none;
+}
+table{
+    padding: 20px 10px 30px 5px;
+    font-size: 18px;
+}
+tr{
+    text-align: right; 
+}
+
+input[type="text"]{
+    height: 40px;
+    width: calc(100%);
+    background-color: whitesmoke;
+    border: 1px solid white;
+    font-size: 18px;
+    display: inline-block;
+}
+input::placeholder{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: .5;
+    width: 100%;
+    color: grey;
+}
+p{
+    text-align: right;
+    padding-left: 50px;
+}
+td{
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    table {
+        width:95%;
+    }
+    input[type=text], textarea {
+        width:75%;
+    }
+    label{
+        font-size: 12px;
+        text-align: center;
+        width: 80%;
+    }
+
+}
+#text{
+    font-size: 14px;
+    text-align: left;
+    color: darkgray;
+}
+
+.buttons{
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+.bttns{
+    height: 40px;
+    background-color: lightskyblue;
+    border: 1px solid white;
+}
+.bttn1{
+    width: 30%;
+}
+.bttn2{
+    width: 45%;
+}
+.bttns:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}
