@@ -1,48 +1,22 @@
-function Validate(){
-    var regex = /[^a-zA-Z0-9]/;
-    var field = document.querySelectorAll(".valid");
-    //Validate TextBox value against the Regex.
-    var isValid = regex.test(document.getElementsByClassName("valid").value);
-    var pipeline = document.valform.pipeline.value;
-    var bucket = document.valform.bucket.value;
-    var file = document.valform.file.value;
-    var credentials = document.valform.credentials.value;
-    var run = document.valform.run.value;
-        if (!isValid) {
-            alert("Contains Special Characters.");
-        }
-        if (field.values.length <= 5){
-            alert("Minimum length error");
-            console.log("hello");
-        }
-        if (pipeline[0] || bucket[0] || file[0] || credentials[0] || run[0] == "-"){
-            alert("contains '_,+,-'");
-        } 
+function getInputValue(){
+var elements = document.getElementsByClassName("valid");
+var regex = /^[a-zA-Z0-9]{4,10}$/;
+for (let i = 0; i < elements.length; i++) {
+    if (elements.item(i).value.length < 5){
+        alert("minimum length should be 5");
     };
-
-
+    if (elements.item(i).value[0] == '-' || elements.item(i).value[0] == '_' || elements.item(i).value[0] == '+'){
+        alert("Cannot start with '-', '_', '+'");
+    };
+    if(regex.test(elements.item(i).value) == false){
+        alert("No special characters allowed");
+    };
+  };
+}
 
 function Clear(){
-    document.querySelectorAll(".valid").innerHTML = "";
+    var elements = document.getElementsByClassName("valid");
+    for (let i = 0; i < elements.length; i++) {
+        elements.item(i).value = "";
+    }
 }
-
-
-/*
-function stringlength(inputtxt, minlength, maxlength)
-{ 
-var field = inputtxt.value; 
-var mnlen = minlength;
-var mxlen = maxlength;
-
-if(field.length<mnlen || field.length> mxlen)
-{ 
-alert("Please input the userid between " +mnlen+ " and " +mxlen+ " characters");
-return false;
-}
-else
-{ 
-alert('Your userid have accepted.');
-return true;
-}
-}
-*/
